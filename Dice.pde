@@ -1,29 +1,36 @@
 void setup()
 {
-	noLoop();
+  size(500,500);
+  background(0);
+  noLoop();
+
 }
 void draw()
 {
-	//your code here
+  Die b = new Die(50,50);
+  b.show();
 }
 void mousePressed()
 {
-	redraw();
+  redraw();
 }
-class Die //models one single dice cube
+class Die
 {
-	//variable declarations here
-	
-	Die(int x, int y) //constructor
-	{
-		//variable initializations here
-	}
-	void roll()
-	{
-		//your code here
-	}
-	void show()
-	{
-		//your code here
-	}
+  int myx, myy, dots;
+
+  Die(int x, int y) //constructor
+  {
+    myx = 100;
+    myy = 100;
+    dots= 1;
+  }
+  void roll()
+  {
+    //your code here
+  }
+  void show()
+  {
+    stroke(255);
+    square(100,100,15);
+  }
 }
