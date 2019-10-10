@@ -7,6 +7,7 @@ void setup()
 }
 void draw()
 {
+  background(0);
   Die b = new Die(50,50);
   b.show();
 }
@@ -23,14 +24,28 @@ class Die
     myx = 100;
     myy = 100;
     dots= 1;
+
   }
   void roll()
   {
-    //your code here
+    dots=(int)(Math.random()*6)+1;
   }
   void show()
   {
-    stroke(255);
-    square(100,100,15);
+    int sum=0;
+    for(int i =0;i<5;i++){
+     for(int column=0;column<5;column++){
+             square(myx+(column*100),myy+(i*100),50);
+             fill(0);
+             roll();
+             sum+=dots;
+             if (dots==1||dots==3||dots==5){
+             ellipse(myx+(column*100)+25,myy+(i*100)+25,5,5);
+             fill(255);
+             }else if(dots==2||dots==3||dots==4||dots==5){
+               
+     }
   }
+  }
+}
 }
