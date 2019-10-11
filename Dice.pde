@@ -42,8 +42,9 @@ class Die
              if (dots==1||dots==3||dots==5){
              ellipse(myx+(column*100)+25,myy+(i*100)+25,5,5);
              fill(255);
-             }else if(dots==2||dots==3||dots==4||dots==5){
-               
+             }else if(dots==2||dots==3||dots==4||dots==5||dots==6){
+             ellipse(myx+(column*100)+5,myy+(i*100)+5,5,5);
+             ellipse(myx+(column*100)+45,myy+(i*100)+45,5,5);
      }
   }
   }
