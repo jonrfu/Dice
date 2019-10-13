@@ -36,7 +36,7 @@ class Die
     for(int i =0;i<5;i++){
      for(int column=0;column<5;column++){
              fill(255);
-             square(myx+(column*100),myy+(i*100),50);
+             rect(myx+(column*100),myy+(i*100),50,50);
              fill(0);
              roll();
              sum += dots;
@@ -70,6 +70,7 @@ class Die
   
   }
 }
+stroke(255);
 System.out.println(sum);
 }
 }
