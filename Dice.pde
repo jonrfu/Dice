@@ -72,6 +72,6 @@ class Die
   }
 }
 stroke(255,255,255);
-System.out.println(sum);
+text(sum,150,150);
 }
 }
