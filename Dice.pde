@@ -8,8 +8,11 @@ void setup()
 void draw()
 {
   background(0);
+  for(int i =0;i<5;i++){
+     for(int column=0;column<5;column++){
   Die b = new Die(50,50);
-  b.show();
+  b.show();}
+  }
 }
 void mousePressed()
 {
@@ -33,8 +36,7 @@ class Die
   void show()
   {
     int sum=0;
-    for(int i =0;i<5;i++){
-     for(int column=0;column<5;column++){
+
              fill(255);
              stroke(0);
              rect(myx+(column*100),myy+(i*100),50,50);
@@ -67,9 +69,9 @@ class Die
              }
 
 
-     }
+     
   
-  }
+  
 }
 stroke(255,255,255);
 text(sum,150,150);
