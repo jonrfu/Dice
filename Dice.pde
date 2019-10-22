@@ -1,19 +1,20 @@
-int sum=0;
+int sum;
 void setup()
 {
   size(500,500);
   background(0);
   noLoop();
-
 }
 void draw()
 {
   background(0);
   Die b = new Die(50,50);
   b.show();
-  stroke(255);
+  stroke(100,100,255);
   textSize(20);
-  text("Total" + sum,40,40);
+  fill(255);
+  text(sum,40,40);
+ 
 }
 void mousePressed()
 {
@@ -37,11 +38,13 @@ class Die
   }
   void show()
   {
-   //sum=0;
+
+   sum=0;
     for(int i =0;i<4;i++){
      for(int column=0;column<4;column++){
              fill(255);
              stroke(0);
+               strokeWeight(1);
              rect(myx+(column*100),myy+(i*100),50,50);
              fill(0);
              roll();
