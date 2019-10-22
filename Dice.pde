@@ -1,3 +1,4 @@
+int sum=0;
 void setup()
 {
   size(500,500);
@@ -10,6 +11,9 @@ void draw()
   background(0);
   Die b = new Die(50,50);
   b.show();
+  stroke(255);
+  textSize(20);
+  text("Total" + sum,40,40);
 }
 void mousePressed()
 {
@@ -29,12 +33,13 @@ class Die
   void roll()
   {
     dots=(int)(Math.random()*6)+1;
+  
   }
   void show()
   {
-    int sum=0;
-    for(int i =0;i<5;i++){
-     for(int column=0;column<5;column++){
+   //sum=0;
+    for(int i =0;i<4;i++){
+     for(int column=0;column<4;column++){
              fill(255);
              stroke(0);
              rect(myx+(column*100),myy+(i*100),50,50);
@@ -70,8 +75,7 @@ class Die
      }
   
   }
+ 
 }
-stroke(255,255,255);
-System.out.println(sum);
 }
 }
